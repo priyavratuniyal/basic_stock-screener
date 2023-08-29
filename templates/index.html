@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>
+        Stock Screener
+    </title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/styles.css')}}" />
+</head>
+<body>
+    <h1>Stock SCREENER</h1>
+    <form>
+        <select name="pattern">
+            {% for pattern in patterns_var%}
+            <option value="{{pattern}}" {% if current_pattern==pattern %} selected="selected"{% endif %}>{{patterns_var[pattern]}}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Scan">
+    </form>
+
+    <table>
+        <tr>
+            <th>Stock</th>
+            <th>Company Name</th>
+            <th>Sentiment Pattern</th>
+        </tr>
+        {% for stock in stocks_var %}
+            {% if stocks_var[stock]['pattern_sentiment'] %}
+            <tr>
+                <td class="stock_symbol">{{stock}}</td>
+                <td class="stock_name">{{stocks_var[stock]['company']}}</td>
+                <td class="{{stocks_var[stock]['pattern_sentiment']}}">{{stocks_var[stock]['pattern_sentiment']}}</td>
+            </tr>
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    <img src="https://stockcharts.com/c-sc/sc?s={{stock}}&p=D&b=5&g=0&i=0&r=1693242593726"/>-->
+<!--                </td>-->
+<!--            </tr>-->
+            {% endif %}
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Space+Grotesk&display=swap');
+body {
+        font-family: 'Space Grotesk', sans-serif;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #1e1e1e;
+        color: white;
+    }
+
+h1 {
+    /* font-family: 'Roboto Slab', serif; */
+    font-size: 50px;
+    margin: 20px;
+    color: white;
+    }
+
+td {
+    padding : 10px;
+    }
+
+th {
+    font-size: 25px;
+    padding : 20px;
+    color: white;
+    }
+
+select[name="pattern"] {
+        padding: 10px; 
+        margin-right: 10px; 
+        background-color: #3e3e42;
+        color: white;
+        border: none;
+        border-radius: 10px;
+    }
+
+input[type="submit"] {
+        background-color: #007acc;   /* Change the background color to blue */
+        color: white;             /* Text color */
+        padding: 10px 20px;       /* Add padding to increase button size */
+        border: none;             /*Remove border*/
+        border-radius: 5px;       /* Add rounded corners */
+        cursor: pointer;          /* Change cursor on hover */
+    }
+
+.bullish {
+            background: #239b31;
+            color:white;
+            text-align: center;
+        }
+
+.bearish {
+            background: #C70039;
+            color:white;
+            text-align: center;
+        }
+
+.stock_symbol  {
+                  text-align:center;
+               }
+
+.stock_name  {
+                  text-align:center;
+               }
